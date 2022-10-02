@@ -1,0 +1,15 @@
+@import 'utils/styles/_colors';
+@import 'utils/styles/_mixins';
+
+.%kind%__%dashed-name%-container {
+  position: relative;
+  // TODO: add default styles (usually focused on phones)
+
+  /******************************************
+   *      RESPONSIVITY (media queries)      *
+   ******************************************/
+  @include gt-phone {
+    // TODO: add specifications for devices that are greater than phones
+    // example: .content { ... }
+  }
+}

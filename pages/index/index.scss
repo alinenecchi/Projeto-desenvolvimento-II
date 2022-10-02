@@ -1,0 +1,64 @@
+@import 'utils/styles/_colors';
+@import 'utils/styles/_mixins';
+
+.page__homeContainer {
+  .sampleTest {
+    text-decoration: underline;
+    font-style: italic;
+  }
+
+  .section-what-is {  
+    & > div {  
+      & > img {
+        max-height: 24rem;
+      }
+    }
+  }
+
+  @include gt-phone {
+    .section-hero {
+    }
+    
+    .section-quote {
+      height: 100%;
+    }
+    
+    .section-what-is {
+      max-height: 72rem;
+    
+      & > div {
+        max-height: 72rem;
+    
+        & > img {
+          max-height: 72rem;
+        }
+      }
+    }
+    
+    .section-gallery {
+      height: 70.8rem;
+    }
+    
+    .section-join {
+      height: 96.8rem;
+    }
+    
+    .section-courses {
+      min-height: 79.2rem;
+    }
+    
+    .section-timeline {
+      height: 79.2rem;
+    }
+    
+    .section-news {
+      
+    }
+    
+    .section-footer {
+      height: 62.4rem;
+    }
+    
+  }
+}
+

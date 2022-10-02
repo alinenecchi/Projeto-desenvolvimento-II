@@ -1,0 +1,53 @@
+
+// !!IMPORTANT!! Creator dynamic content start
+// Spacings
+$s-zs: .8rem;
+$s-s: 1.6rem;
+$s-md: 2.4rem;
+$s-lg: 3.2rem;
+$s-xl: 4.8rem;
+$s-xxl: 6.4rem;
+$s-xxxl: 12.8rem;
+
+// Breakpoints
+$bp-content: 13.66rem;
+$bp-phone: 600px;
+$bp-tablet: 1080px;
+$bp-desktop: 1920px;
+// !!IMPORTANT!! End of Creator dynamic content
+
+// GRID SIZES
+$grid-padding: 2.4rem;
+$grid-padding-desktop: 9.6rem;
+$grid-gutter: 3.2rem;
+$grid-width-desktop: 117.4rem;
+
+// FONT SIZES
+$text-size-micro: 1rem; 
+$text-size-xtiny: 1.2rem;
+$text-size-tiny: 1.4rem;
+$text-size-default: 1.6rem;
+$text-size-small: 2rem;
+$text-size-medium:2.4rem;
+$text-size-large: 3.2rem;
+$text-size-xlarge: 4.8rem;
+
+// LINE HEIGHT
+$text-line-height-default: 1.6rem;
+$text-line-height-small: 2rem;
+$text-line-height-medium: 2.4rem;
+$text-line-height-xmedium: 3.2rem;
+$text-line-height-large: 4rem;
+$text-line-height-xlarge: 4.8rem;
+
+//COLOCAR ESSAS VARIAVEIS NO ARQUIVO CORRETO
+// Z-INDEX
+$z-index-underground: -1;
+$z-index-ground: 1;
+$z-index-jump: 10;
+$z-index-above: 100;
+$z-index-sky: 1000;
+$z-index-moon: 10000;
+
+//TRANSITIONS
+$basic-transition: .3s;

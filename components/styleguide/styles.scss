@@ -1,0 +1,227 @@
+@import 'utils/styles/_reset';
+
+$first-grid-col: 140px;
+
+.colors-container {
+  margin: 10px;
+}
+
+.heading {
+  display: grid;
+  grid-template-columns: $first-grid-col repeat(6, 50px);
+  text-align: center;
+  margin: 20px 0;
+}
+
+.grid {
+  width: min-content;
+  .line {
+    display: grid;
+    grid-template-columns: $first-grid-col repeat(6, 50px);
+    margin: 10px 0;
+    border: solid 1px transparent;
+    border-left: none;
+    border-right: none;
+    padding: 5px;
+
+    &:hover {
+      border-color: #d0d0d0;
+    }
+    // position: relative;
+    // z-index: 1;
+
+    &.background {
+      .square.s-1 {
+        background-color: $primary-white;
+      }
+      .square.s-2 {
+        background-color: $primary-white;
+      }
+      .square.s-3 {
+        background-color: $primary-white;
+      }
+      .square.s-4 {
+        border: 0;
+      }
+      .square.s-5 {
+        border: 0;
+      }
+      .square.s-6 {
+        border: 0;
+      }
+    }
+
+    &.base {
+      .square.b-1 {
+        background-color: $primary-white;
+      }
+      .square.b-2 {
+        background-color: $primary-white;
+      }
+      .square.b-3 {
+        background-color: $primary-white;
+      }
+      .square.b-4 {
+        background-color: $primary-white;
+      }
+      .square.b-5 {
+        background-color: $primary-white;
+      }
+      .square.b-6 {
+        background-color: $primary-white;
+      }
+    }
+
+    &.primary {
+      .square.p-1 {
+        background-color: $primary-white;
+      }
+      .square.p-2 {
+        background-color: $primary-off-white;
+      }
+      .square.p-3 {
+        background-color: $primary-black;
+      }
+      .square.p-4 {
+        background-color: $primary-red;
+      }
+      .square.p-5 {
+        background-color: $primary-white;
+      }
+      .square.p-6 {
+        border: 0;
+      }
+    }
+
+    &.secondary {
+      .square.sc-1 {
+        background-color: $secondary-dark-red;
+      }
+      .square.sc-2 {
+        background-color: $secondary-orange;
+      }
+      .square.sc-3 {
+        background-color: $secondary-yellow;
+      }
+      .square.sc-4 {
+        background-color: $primary-white;
+      }
+      .square.sc-5 {
+        background-color: $primary-white;
+      }
+      .square.sc-6 {
+        border: 0;
+      }
+    }
+
+    &.warning {
+      .square.w-1 {
+        background-color: $primary-white;
+      }
+      .square.w-2 {
+        border: 0;
+      }
+      .square.w-3 {
+        border: 0;
+      }
+      .square.w-4 {
+        border: 0;
+      }
+      .square.w-5 {
+        border: 0;
+      }
+      .square.w-6 {
+        border: 0;
+      }
+    }
+
+    &.danger {
+      .square.d-1 {
+        background-color: $primary-white;
+      }
+      .square.d-2 {
+        border: 0;
+      }
+      .square.d-3 {
+        border: 0;
+      }
+      .square.d-4 {
+        border: 0;
+      }
+      .square.d-5 {
+        border: 0;
+      }
+      .square.d-6 {
+        border: 0;
+      }
+    }
+
+    &.success {
+      .square.suc-1 {
+        background-color: $primary-white;
+      }
+      .square.suc-2 {
+        background-color: $primary-white;
+      }
+      .square.suc-3 {
+        border: 0;
+      }
+      .square.suc-4 {
+        border: 0;
+      }
+      .square.suc-5 {
+        border: 0;
+      }
+      .square.suc-6 {
+        border: 0;
+      }
+    }
+
+    .square {
+      position: relative;
+      overflow: visible;
+      // z-index: 999;
+
+      &:hover {
+        &::before {
+          content: attr(data-scss-color-name);
+          position: absolute;
+          z-index: 9999;
+          background-color: #f0f0f0;
+          border: solid 1px #999;
+          color: #999;
+          display: flex;
+          justify-content: center;
+          margin-top: 40px;
+          white-space: nowrap;
+          padding: 5px;
+
+          &:empty {
+            display: none;
+          }
+        }
+      }
+    }
+
+
+    .label {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      border-right: solid 1px #d0d0d0;
+      margin-right: 10px;
+    }
+  }
+}
+
+.square {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: solid 1px #d0d0d0;
+}
+
+.x1 {
+  background-color: $primary-white;
+}

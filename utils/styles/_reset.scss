@@ -1,0 +1,43 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  
+  font-family: Poppins, sans-serif;
+  font-smoothing: antialiased;
+  webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  height: 100%;
+}
+
+svg {
+  fill: currentColor;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+@import 'utils/styles/_colors';
+@import 'grid-system.scss';

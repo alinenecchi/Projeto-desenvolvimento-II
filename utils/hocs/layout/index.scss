@@ -1,0 +1,16 @@
+.layout {
+    position: relative;
+
+    & > .navbar {
+        position: absolute;
+        z-index: 999;
+        width: 100%;
+    }
+
+    & > .social-media {
+        position: absolute;
+        z-index: 999;
+        right: 0;
+        margin: 28.8rem 1.2rem 0 0;
+    }
+}

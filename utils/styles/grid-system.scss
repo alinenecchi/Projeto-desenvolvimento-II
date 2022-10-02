@@ -1,0 +1,203 @@
+@import 'utils/styles/_mixins';
+
+/*
+ * GRID
+ */
+.grid-container {
+  display: grid;
+  width: 100%;
+  // height: 100%;
+
+  @for $i from 1 through 12 {
+
+    // gap
+    &[data-g-gap="#{$i}"] {
+      grid-gap: #{$i}rem;
+      // padding: #{$i / 2}rem;
+    }
+
+    // number of columns
+    &[data-g-size^="#{$i}"] {
+      grid-template-columns: repeat(#{$i}, 1fr);
+    }
+    // number of rows
+    &[data-g-size$="/#{$i}"] {
+      grid-template-rows: repeat(#{$i}, min-content);
+    }
+
+    @include phone {
+      grid-template-columns: 1fr !important;
+      grid-template-rows: unset !important;
+
+      &[data-g-m-size^="#{$i}"] {
+        grid-template-columns: repeat(#{$i}, 1fr) !important;
+      }
+      &[data-g-m-size$="/#{$i}"] {
+        grid-template-rows: repeat(#{$i}, 1fr) !important;
+      }
+    }
+
+    @include tablet {
+      &[data-g-t-size^="#{$i}"] {
+        grid-template-columns: repeat(#{$i}, 1fr) !important;
+      }
+      &[data-g-t-size$="/#{$i}"] {
+        grid-template-rows: repeat(#{$i}, 1fr) !important;
+      }
+    }
+
+    @include desktop {
+      &[data-g-d-size^="#{$i}"] {
+        grid-template-columns: repeat(#{$i}, 1fr) !important;
+      }
+      &[data-g-d-size$="/#{$i}"] {
+        grid-template-rows: repeat(#{$i}, 1fr) !important;
+      }
+    }
+
+    @include gt-desktop {
+      &[data-g-l-size^="#{$i}"] {
+        grid-template-columns: repeat(#{$i}, 1fr);
+      }
+      &[data-g-l-size$="/#{$i}"] {
+        grid-template-rows: repeat(#{$i}, 1fr);
+      }
+    }
+
+    // cell position
+    &>[data-g-pos^="#{$i}"] {
+      grid-column-start: #{$i};
+    }
+    &>[data-g-pos$="/#{$i}"] {
+      grid-row-start: #{$i};
+    }
+    @include phone {
+      &>[data-g-m-pos^="#{$i}"] {
+        grid-column-start: #{$i} !important;
+      }
+      &>[data-g-m-pos$="/#{$i}"] {
+        grid-row-start: #{$i} !important;
+      }
+    }
+    @include tablet {
+      &>[data-g-t-pos^="#{$i}"] {
+        grid-column-start: #{$i} !important;
+      }
+      &>[data-g-t-pos$="/#{$i}"] {
+        grid-row-start: #{$i} !important;
+      }
+    }
+    @include desktop {
+      &>[data-g-d-pos^="#{$i}"] {
+        grid-column-start: #{$i} !important;
+      }
+      &>[data-g-d-pos$="/#{$i}"] {
+        grid-row-start: #{$i} !important;
+      }
+    }
+    @include gt-desktop {
+      &>[data-g-l-pos^="#{$i}"] {
+        grid-column-start: #{$i} !important;
+      }
+      &>[data-g-l-pos$="/#{$i}"] {
+        grid-row-start: #{$i} !important;
+      }
+    }
+
+    // cell size
+    &>[data-g-size^="#{$i}"] {
+      grid-column-end: span #{$i};
+    }
+    &>[data-g-size$="/#{$i}"] {
+      grid-row-end: span #{$i};
+    }
+
+    @include phone {
+      &>[data-g-m-size^="#{$i}"] {
+        grid-column-end: span #{$i} !important;
+      }
+      &>[data-g-m-size$="/#{$i}"] {
+        grid-row-end: span #{$i} !important;
+      }
+    }
+    @include tablet {
+      &>[data-g-t-size^="#{$i}"] {
+        grid-column-end: span #{$i} !important;
+      }
+      &>[data-g-t-size$="/#{$i}"] {
+        grid-row-end: span #{$i} !important;
+      }
+    }
+    @include desktop {
+      &>[data-g-d-size^="#{$i}"] {
+        grid-column-end: span #{$i} !important;
+      }
+      &>[data-g-d-size$="/#{$i}"] {
+        grid-row-end: span #{$i} !important;
+      }
+    }
+    @include gt-desktop {
+      &>[data-g-l-size^="#{$i}"] {
+        grid-column-end: span #{$i} !important;
+      }
+      &>[data-g-l-size$="/#{$i}"] {
+        grid-row-end: span #{$i} !important;
+      }
+    }
+  }
+}
+
+/*
+ * CONTENT
+ */
+[data-content-wrapper] {
+  position: relative;
+  width: 100%;
+
+ @include gt-tablet {
+   max-width: 144rem;
+   margin: auto;
+ } 
+}
+
+.grid-section-wrapper {
+  position: relative;
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto minmax(auto, 144.0rem) auto;
+
+  >:first-child {
+    position: relative;
+    visibility: hidden;
+    overflow: hidden;
+    width: 0;
+  }
+
+  >:nth-child(2) {
+    display: inline-block;
+    padding: 0 1rem;
+  }
+  
+  >:last-child {
+    position: relative;
+    visibility: hidden;
+    overflow: hidden;
+    width: 0;
+  }
+
+  @include gt-tablet {
+    >:first-child {
+      visibility: visible;
+      overflow: unset;
+      width: unset;
+    }
+    >:nth-child(2) {
+      padding: 0;
+    }
+    >:last-child {
+      visibility: visible;
+      overflow: unset;
+      width: unset;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "utils/styles/reset";
+
+.atom__section-el-container {
+  position: relative;
+
+  .tmp-leftDecorator {
+    background: blue;
+  }
+
+  .tmp-content {
+    border: solid 1px #999;
+    height: 300px;
+  }
+
+  .tmp-rightDecorator {
+    background: yellow;
+  }
+}

@@ -1,0 +1,16 @@
+.icons-list-story {
+  .icon-container-story {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    background-color: #f0f0f0;
+    width: 10rem;
+
+    svg, img {
+      margin-bottom: .5rem;
+    }
+  }
+}
