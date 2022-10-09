@@ -41,6 +41,7 @@
   "dependencies": {
     "@storybook/preset-typescript": "^3.0.0",
     "dotenv": "^10.0.0",
+    "firebase": "^9.11.0",
     "inquirer": "^8.2.0",
     "isomorphic-unfetch": "^3.1.0",
     "next": "9.3.0",
